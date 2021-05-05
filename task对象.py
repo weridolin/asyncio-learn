@@ -13,6 +13,8 @@
 # 创建TASK对象，这样可以让携程加入事件循环中等待被调度执行，还可以使用
 # LOOP.CREATE_TASK()或ENSURE_FUTURE函数
 import asyncio
+
+
 async def others():
     print("start")
     await asyncio.sleep(2)
@@ -31,7 +33,6 @@ async def func():
     print("IO请求结束",res2)
 asyncio.run(func())
 
-import asyncio
 async def others():
     print("start")
     await asyncio.sleep(2)
@@ -49,3 +50,4 @@ async def func():
     done= await asyncio.wait(task_list,timeout=None)
     print(done)
 asyncio.run(func())
+

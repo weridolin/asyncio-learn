@@ -16,6 +16,7 @@ class AsyncContextManager:
     async def do_Sth(self):
         # op database
         return "op end"
+    
 
     async def __aenter__(self):
         # 异步链接到数据库
